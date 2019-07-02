@@ -6,7 +6,7 @@ const { userById } = require('../controllers/user')
 
 const router = express.Router()
 
-router.get('/',getPosts);
+router.get('/posts',getPosts);
 router.post('/post/new/:userId',requireSignin,createPost,createPostValidator);
 router.get('/posts/by/:userId',requireSignin,postsByUser);
 router.delete('/post/:postId',requireSignin,isPoster,deletePost);
